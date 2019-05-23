@@ -7,3 +7,5 @@ Task Completed.
 Task Completed.
 ### Task #3 - Creating test suite
 Task Completed.
+### Task #4 - Implementing big step interpreter
+Task Completed.
