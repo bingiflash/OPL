@@ -20,7 +20,7 @@ class mul:
     def __str__(self):
         return '('+str(self.l)+' * '+str(self.r)+')'
     def interp(self):
-        return self.l.interp() * self.r.interp()
+        return self.l.interp() * self.r.interp()      
 #test-suite
 #1
 print(str(mul(add(add(Number(1), Number(2)),mul(Number(3),Number(4))), Number(10))) == "(((1 + 2) + (3 * 4)) * 10)")
