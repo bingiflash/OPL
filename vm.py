@@ -59,23 +59,39 @@ print(thiry_two_)
 #6
 sixty_four = mul(two, mul(two, mul(two, mul(two, mul(two, two)))))
 print(str(sixty_four) == "((1 + 1) * ((1 + 1) * ((1 + 1) * ((1 + 1) * ((1 + 1) * (1 + 1))))))")
+sixty_four_ = cons(atom('*'), cons(two_, cons(cons(atom('*'), cons(two_, cons(cons(atom('*'), cons(two_, cons(cons(atom('*'), cons(two_, cons(cons(atom('*'), cons(two_, cons(two_, atom('')))), atom('')))), atom('')))), atom('')))), atom(''))))
+print(sixty_four_)
 #7
 ten = mul(Number(5), Number(2))
 hundred = mul(ten, ten)
 thousand = mul(ten, hundred)
 six_four_three_two = add(add(mul(Number(6),thousand),mul(Number(4),hundred)),add(mul(Number(3), ten),Number(2)))
 print(str(six_four_three_two) == "(((6 * ((5 * 2) * ((5 * 2) * (5 * 2)))) + (4 * ((5 * 2) * (5 * 2)))) + ((3 * (5 * 2)) + 2))")
+ten_ = cons(atom('*'), cons(atom('5'), cons(atom('2'), atom(''))))
+hundred_ = cons(atom('*'), cons(ten_, cons(ten_, atom(''))))
+thousand_ = cons(atom('*'), cons(ten_, cons(hundred_, atom(''))))
+six_four_three_two_ = cons(atom('+'), cons(cons(atom('+'), cons(cons(atom('*'), cons(atom('6'), cons(thousand_, atom('')))), cons(cons(atom('*'), cons(atom('4'), cons(hundred_, atom('')))), atom('')))), cons(cons(atom('+'), cons(cons(atom('*'), cons(atom('3'), cons(atom('10'), atom('')))), cons(atom('2'), atom('')))), atom(''))))
+print(six_four_three_two_)
 #8
 temp = add(Number(1), Number(1))
 for i in range(5):
     temp = add(temp,temp)
 print(str(temp) == "((((((1 + 1) + (1 + 1)) + ((1 + 1) + (1 + 1))) + (((1 + 1) + (1 + 1)) + ((1 + 1) + (1 + 1)))) + ((((1 + 1) + (1 + 1)) + ((1 + 1) + (1 + 1))) + (((1 + 1) + (1 + 1)) + ((1 + 1) + (1 + 1))))) + (((((1 + 1) + (1 + 1)) + ((1 + 1) + (1 + 1))) + (((1 + 1) + (1 + 1)) + ((1 + 1) + (1 + 1)))) + ((((1 + 1) + (1 + 1)) + ((1 + 1) + (1 + 1))) + (((1 + 1) + (1 + 1)) + ((1 + 1) + (1 + 1))))))")
+temp_ = cons(atom('+'), cons(atom('1'), cons(atom('1'), atom(''))))
+for i in range(5):
+    temp_ = cons(atom('+'), cons(temp_, cons(temp_, atom(''))))
+print(temp_)
 #9
 print(str(add(add(Number(1), Number(1)), mul(ten, mul(hundred, thousand)))) == "((1 + 1) + ((5 * 2) * (((5 * 2) * (5 * 2)) * ((5 * 2) * ((5 * 2) * (5 * 2))))))")
+print(cons(atom('+'), cons(cons(atom('+'), cons(atom('1'), cons(atom('1'), atom('')))), cons(cons(atom('*'), cons(ten_, cons(atom('*'), cons(hundred_, cons(thousand_, atom('')))))), atom('')))))
 #10
 meaning_of_life = add(mul(Number(4),ten), Number(2))
 print(str(meaning_of_life) == "((4 * (5 * 2)) + 2)")
+meaning_of_life_ = cons(atom('+'), cons(cons(atom('*'), cons(atom('4'), cons(ten_, atom('')))), cons(atom('2'), atom(''))))
+print(meaning_of_life_)
 #11
 print(str(add(hundred, ten)) == "(((5 * 2) * (5 * 2)) + (5 * 2))")
+print(cons(atom('+'), cons(hundred_, cons(ten_, atom('')))))
 #12
 print(str(add(ten, Number(-1))) == "((5 * 2) + -1)")
+print(cons(atom('+'), cons(ten_, cons(atom('-1'), atom('')))))

@@ -12,4 +12,4 @@ Task Completed.
 ### Task #5 - Sexpr
 Task Completed.
 ### Task #6 - test-suite for sexpr
-Task started.
+Task Completed.
