@@ -9,3 +9,7 @@ Task Completed.
 Task Completed.
 ### Task #4 - Implementing big step interpreter
 Task Completed.
+### Task #5 - Sexpr
+Task Completed.
+### Task #6 - test-suite for sexpr
+Task started.
