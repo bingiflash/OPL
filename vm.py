@@ -30,6 +30,7 @@ class cons:
     def __init__(self, atom, n):
         self.value = atom
         self.next = n
+    
     def __str__(self):
         return str(self.value) + ' ' + str(self.next) 
 #test-suite

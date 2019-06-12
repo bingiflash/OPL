@@ -13,3 +13,5 @@ Task Completed.
 Task Completed.
 ### Task #6 - test-suite for sexpr
 Task Completed.
+### Task #7 - desugar
+Task confusing.
